@@ -1,9 +1,9 @@
 # simple-thread-python
 
-This is a simple thread util (python)
-
-유틸로 사용 할 수도 있는 간단한 파이썬 쓰레드 예제 입니다.
-
+This is a simple thread util (python) \
+ \
+유틸로 사용 할 수도 있는 간단한 파이썬 쓰레드 예제 입니다. \
+ \
 최근 파이썬으로 다량의 데이터 수집용 멀티 클라이언를 개발코자 아래와 같이 챗GPT에게 조언을 얻어 진행 했습니다 :-)
  \
  \
