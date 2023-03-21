@@ -41,8 +41,8 @@ def get_info (round) :
         ball_compile = re.compile (ball_regex, re.DOTALL | re.IGNORECASE | re.MULTILINE)
         ball_matches = ball_compile.findall (info_match_html)
         
-        for draw_match in ball_matches :
-             result.append (draw_match [1])
+        for round_match in ball_matches :
+             result.append (round_match [1])
              
     except Exception as e :
         print (str (e))
@@ -64,14 +64,14 @@ def get_list (max) :
         list_matches = re.search (list_regex, result_html, re.DOTALL | re.IGNORECASE | re.MULTILINE)
         list_match_html = list_matches.group (0)
 
-        draw_regex = r"<option value=\"(.*?)\".*?>(.*?)</option>"
-        draw_compile = re.compile (draw_regex, re.DOTALL | re.IGNORECASE | re.MULTILINE)
-        draw_matches = draw_compile.findall (list_match_html)
+        round_regex = r"<option value=\"(.*?)\".*?>(.*?)</option>"
+        round_compile = re.compile (round_regex, re.DOTALL | re.IGNORECASE | re.MULTILINE)
+        round_matches = round_compile.findall (list_match_html)
         
         n = 0
-        for draw_match in draw_matches :
+        for round_match in round_matches :
              n += 1
-             result.append (draw_match [0])
+             result.append (round_match [0])
              if max == n : break
              
     except Exception as e :
