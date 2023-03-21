@@ -9,7 +9,7 @@ This is a simple thread util (python) \
  \
 질문 #1 : Python 멀티 쓰레드 예제 부탁해 \
 질문 #2 : Python 멀티 쓰레드 실행 결과 통합 예제 부탁해 \
-질문 #3 : Python 멀티 쓰레드 동시 실행 제한 예제 부탁해 
+질문 #3 : python 멀티 쓰레드 동시 실행수 10개 제한 예제 부탁해 
  
 ## Sample Code
 
