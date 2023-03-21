@@ -13,7 +13,7 @@ This is a simple thread util (python) \
  
 ## Sample Code
 
-* simple-thread-python.py : 간단한 예제 (질문 #1 참고)
+* simple-thread-python-worker.py : 간단한 예제 (질문 #1 참고)
 * simple-thread-python-results.py : 실행 결과 통합 예제 (질문 #2 참고)
 * simple-thread-python-lotto.py : 멀티 쓰레드 동시 실행 제한 설정 및 결과 통합 예제 (질문 #2 #3 참고, 로또 데이터 수집 및 통계 - RegEx 는 거들뿐)
 
