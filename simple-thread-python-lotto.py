@@ -14,23 +14,22 @@ headers = {
 url_list = "https://dhlottery.co.kr/gameResult.do?method=byWin"
 url_info = "https://dhlottery.co.kr/gameResult.do?method=byWin&drwNo={}"
 
-def worker (semaphore, draw, results) :
+def worker (semaphore, round, results) :
     
     with semaphore :
-        print (f"Worker get_info ({draw}) started")
-        result = get_info (draw)
+        print (f"Worker get_info ({round}) started")
+        result = get_info (round)
         results.append (result)
-        print (f"Worker get_info ({draw}) finished")
-        
+        print (f"Worker get_info ({round}) finished")
 
-def get_info (draw) :
+def get_info (round) :
     global headers;
     global url_info;
     
     result = []
     
     try :
-        url = url_info.format (draw)
+        url = url_info.format (round)
         print ("get info : {}".format (url))
         result_html = requests.get (url, headers = headers).text
 
@@ -86,13 +85,13 @@ if __name__ == '__main__' :
     results = []
     semaphore = threading.Semaphore (max_threads)
 
-    draws = get_list (max_list)
-    print (draws)
+    rounds = get_list (max_list)
+    print (rounds)
     
     # 실행 작업 카운트 만큼 스레드를 생성합니다.
     threads = []
-    for draw in draws :
-        threads.append (threading.Thread (target = worker, args = (semaphore, draw, results)))
+    for round in rounds :
+        threads.append (threading.Thread (target = worker, args = (semaphore, round, results)))
 
     # 생성한 스레드들을 시작합니다.
     for thread in threads :
