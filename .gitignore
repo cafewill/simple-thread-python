@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+bin/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+__pypackages__/
+share/python-wheels/
+*.egg
+
+# Project specific
+.env
+*.log
+*.pid
+*.cfg
+*.conf
+*.swp
+*.DS_Store
+*.idea/
+*.pydevproject
+*.project
+*.settings/
+*.venv
